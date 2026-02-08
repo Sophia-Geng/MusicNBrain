@@ -425,7 +425,7 @@ Sophia (Web Server)
 | Backend | Next.js API Routes / FastAPI | API layer |
 | Database | Supabase (PostgreSQL) | Auth, RLS, real-time |
 | Auth | Supabase Auth | Built-in, JWT |
-| LLM | Claude API / OpenAI | Program list parsing |
+| LLM | Claude API / Gemini 3 | Program list parsing |
 | Zoom | Zoom API (OAuth) | Meeting creation |
 | Email | SendGrid / AWS SES | Notifications |
 | Hosting | Vercel + Supabase | Serverless |

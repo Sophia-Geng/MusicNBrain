@@ -428,7 +428,7 @@ Sophia（Web 服务器）
 | 后端 | Next.js API Routes / FastAPI | API 层 |
 | 数据库 | Supabase (PostgreSQL) | 内置认证、RLS、实时功能 |
 | 认证 | Supabase Auth | 内置 JWT 方案 |
-| LLM | Claude API / OpenAI | 节目单解析 |
+| LLM | Claude API / Gemini 3 | 节目单解析 |
 | Zoom | Zoom API (OAuth) | 创建会议 |
 | 邮件 | SendGrid / AWS SES | 发送通知 |
 | 部署 | Vercel + Supabase | Serverless |
