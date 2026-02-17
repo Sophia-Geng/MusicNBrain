@@ -392,7 +392,18 @@ export default function ConcertDetailPage() {
           <div style={{ fontSize: 15, color: "#6b7280", lineHeight: 1.8 }}>
             📅 {new Date(concert.start_time).toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" })}
             <br />
-            {concert.type === "ONLINE" ? "🌐 Online (Zoom)" : `📍 ${concert.venue_name}`} · {concert.duration} min
+            {concert.type === "ONLINE" ? (
+              "🌐 Online (Zoom)"
+            ) : (
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(concert.venue_address || concert.venue_name)}`}
+                target="_blank"
+                style={{ color: "#2563eb", textDecoration: "underline" }}
+              >
+                📍 {concert.venue_name}
+              </a>
+            )}
+            {" · "}{concert.duration} min
           </div>
         </div>
 
@@ -485,7 +496,17 @@ export default function ConcertDetailPage() {
           {" · "}
           {new Date(concert.start_time).toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit" })}
           <br />
-          {concert.type === "ONLINE" ? "🌐 Online (Zoom)" : `📍 ${concert.venue_name}, ${concert.venue_address}`}
+          {concert.type === "ONLINE" ? (
+            "🌐 Online (Zoom)"
+          ) : (
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(concert.venue_address || concert.venue_name)}`}
+              target="_blank"
+              style={{ color: "#2563eb", textDecoration: "underline" }}
+            >
+              📍 {concert.venue_name}, {concert.venue_address}
+            </a>
+          )}
           {" · "}
           {concert.duration} min
         </div>

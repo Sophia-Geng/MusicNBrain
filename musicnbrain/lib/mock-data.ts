@@ -288,6 +288,20 @@ export const mockStudentPerformances: {
       venue_address: "",
       start_time: "2026-03-15T14:00:00Z",
     },
+    {
+      id: "3",
+      concert_title: "Easter Recital 2026",
+      type: "OFFLINE",
+      piece: "Sonatina in G Major",
+      slot: "15:00",
+      duration: 4,
+      order: 1,
+      total_performers: 3,
+      zoom_url: "",
+      venue_name: "Community Center Hall",
+      venue_address: "45 Oak Ave, Cambridge, MA",
+      start_time: "2026-04-05T15:00:00Z",
+    },
   ],
   completed: [
     {

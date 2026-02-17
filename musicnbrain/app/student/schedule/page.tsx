@@ -73,7 +73,11 @@ export default function StudentSchedulePage() {
 
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, fontSize: 14, color: "#374151", marginBottom: 14 }}>
                   <div><span style={{ color: "#9ca3af" }}>Piece:</span> {p.piece}</div>
-                  <div><span style={{ color: "#9ca3af" }}>Time:</span> {p.slot}</div>
+                  <div>
+                    <span style={{ color: "#9ca3af" }}>Date:</span>{" "}
+                    {new Date(p.start_time).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}
+                  </div>
+                  <div><span style={{ color: "#9ca3af" }}>Your Time:</span> {p.slot}</div>
                   <div><span style={{ color: "#9ca3af" }}>Duration:</span> {p.duration} min</div>
                   <div><span style={{ color: "#9ca3af" }}>Order:</span> #{p.order} of {p.total_performers}</div>
                 </div>
@@ -93,7 +97,25 @@ export default function StudentSchedulePage() {
                   <div style={{ background: "#f0fdf4", borderRadius: 8, padding: 14, marginBottom: 14 }}>
                     <div style={{ fontSize: 14, marginBottom: 4 }}><strong>Venue:</strong> {p.venue_name}</div>
                     <div style={{ fontSize: 14, marginBottom: 4 }}><strong>Address:</strong> {p.venue_address}</div>
-                    <div style={{ fontSize: 13, color: "#9ca3af" }}>Please arrive 30 minutes early</div>
+                    <div style={{ fontSize: 13, color: "#9ca3af", marginBottom: 10 }}>Please arrive 30 minutes early</div>
+                    <a
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.venue_address)}`}
+                      target="_blank"
+                      style={{
+                        display: "inline-block",
+                        padding: "8px 18px",
+                        background: "white",
+                        border: "1px solid #16a34a",
+                        color: "#16a34a",
+                        borderRadius: 8,
+                        fontSize: 14,
+                        fontWeight: 500,
+                        textDecoration: "none",
+                        cursor: "pointer",
+                      }}
+                    >
+                      📍 Open in Maps
+                    </a>
                   </div>
                 )}
 

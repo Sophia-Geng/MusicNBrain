@@ -170,9 +170,17 @@ export default function ProgramPrintPage() {
             <br />
             {timeStr}
             <br />
-            {concert.type === "ONLINE"
-              ? "Online via Zoom"
-              : `${concert.venue_name} — ${concert.venue_address}`}
+            {concert.type === "ONLINE" ? (
+              "Online via Zoom"
+            ) : (
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(concert.venue_address || concert.venue_name)}`}
+                target="_blank"
+                style={{ color: "#555", textDecoration: "underline" }}
+              >
+                {concert.venue_name} — {concert.venue_address}
+              </a>
+            )}
           </div>
         </div>
 

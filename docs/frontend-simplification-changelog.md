@@ -118,7 +118,23 @@ The entire teacher-side frontend was redesigned with a "preview-first, edit-on-d
 - Can send multiple messages per performance
 - Slightly increased font sizes and padding for better readability
 
-### 9. `components/shared.tsx` — Shared components (UNCHANGED)
+### 10. Additional small fixes
+
+**Google Maps navigation for offline venues:**
+- Student schedule page: added "📍 Open in Maps" green button for offline performances
+- Teacher concert detail page (both upcoming & past): venue name/address in header is now a clickable link to Google Maps
+- Printable program page: venue address is a clickable link (still works after saving as PDF)
+- Uses Google Maps universal search URL (`https://www.google.com/maps/search/?api=1&query=...`), auto-opens Maps app on mobile
+
+**Student schedule date display:**
+- Added "Date" field (e.g. "Mar 15, 2026") to upcoming performance cards — previously only showed time slot
+- Renamed "Time" to "Your Time" for clarity
+- Grid now shows: Piece, Date, Your Time, Duration, Order
+
+**New mock data:**
+- Added an OFFLINE upcoming performance for student (Easter Recital at "45 Oak Ave, Cambridge, MA") so the Maps button is visible
+
+### 11. `components/shared.tsx` — Shared components (UNCHANGED)
 - NavBar and StatusBadge kept as-is
 - ConfidenceCell still exported but no longer used by the new review page (can be cleaned up later)
 
