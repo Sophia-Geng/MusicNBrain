@@ -97,28 +97,28 @@ Sophia provides the web platform and API that other members' modules plug into.
 ┌─────────────────────▼───────────────────────────────────────────┐
 │                     WEB SERVER (Backend)                        │
 │                                                                 │
-│  Auth Module ─── Concert CRUD ─── Notification Service          │
-│       │                │                    │                   │
-│       │          ┌─────▼──────┐             │                   │
-│       │          │ AI Agent   │             │                   │
-│       │          │ Backend    │             │                   │
-│       │          │ (LLM API)  │             │                   │
-│       │          └─────┬──────┘             │                   │
-│       │                │                    │                   │
-└───────┼────────────────┼────────────────────┼───────────────────┘
-        │                │                    │
-   ┌────▼────┐    ┌──────▼──────┐     ┌───── ─▼─────────┐
-   │Supabase │    │ Zoom API    │     │ Email Service   │
-   │   DB    │    │ (MCP/REST)  │     │ (SendGrid/SES)  │
-   └─────────┘    └─────────────┘     └─────────────────┘
-                         │
-                  ┌──────▼──────────────┐
-                  │ Meeting Management  │
-                  │ & Bot Scheduler     │
-                  │ 1) creation         │
-                  │ 2) subscription     │
-                  │ 3) distribution     │
-                  └─────────────────────┘
+│  ┌──────────┐    ┌──────────────────────────┐    ┌──────────┐   │
+│  │          │    │      Concert CRUD          │    │          │   │
+│  │   Auth   │    │  ┌──────────────────┐    │    │ Notify   │   │
+│  │  Module  │    │  │  AI Agent Backend │    │    │ Service  │   │
+│  │          │    │  │  (LLM Parse)     │    │    │          │   │
+│  │          │    │  └──────────────────┘    │    │          │   │
+│  └────┬─────┘    └────────┬────────┬────────┘    └─────┬────┘   │
+│       │                   │        │                   │        │
+└───────┼───────────────────┼────────┼───────────────────┼────────┘
+        │                   │        │                   │
+   ┌────▼─────┐    ┌────────▼───┐ ┌──▼───────────┐ ┌────▼────────────┐
+   │ Supabase │    │ Supabase   │ │  Zoom API    │ │  Email Service  │
+   │ Auth     │    │ DB         │ │  (MCP/REST)  │ │  (SendGrid/SES) │
+   └──────────┘    └────────────┘ └──────┬───────┘ └─────────────────┘
+                                        │
+                                 ┌──────▼──────────────┐
+                                 │ Meeting Management  │
+                                 │ & Bot Scheduler     │
+                                 │ 1) creation         │
+                                 │ 2) subscription     │
+                                 │ 3) distribution     │
+                                 └─────────────────────┘
 ```
 
 ---

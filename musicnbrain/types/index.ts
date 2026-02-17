@@ -16,6 +16,9 @@ export interface Concert {
   venue_address: string;
   raw_input: string;
   raw_input_type: RawInputType;
+  zoom_url?: string;
+  audience_count?: number;
+  recording_url?: string;
 }
 
 export interface Performance {
@@ -32,6 +35,24 @@ export interface Performance {
   confidence: Confidence;
 }
 
+export interface PerformerReview {
+  performance_id: string;
+  name: string;
+  piece: string;
+  instrument: string;
+  score: number;
+  feedback: string;
+  video_url?: string;
+}
+
+export interface ConcertReviewSummary {
+  concert_id: string;
+  overall_score: number;
+  overall_feedback: string;
+  highlights: string[];
+  performer_reviews: PerformerReview[];
+}
+
 export interface StudentUpcomingPerformance {
   id: string;
   concert_title: string;
@@ -45,6 +66,15 @@ export interface StudentUpcomingPerformance {
   venue_name: string;
   venue_address: string;
   start_time: string;
+}
+
+export interface StudentMessage {
+  id: string;
+  concert_id: string;
+  student_name: string;
+  message: string;
+  created_at: string;
+  read: boolean;
 }
 
 export interface StudentCompletedPerformance {
