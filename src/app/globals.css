@@ -1,0 +1,15 @@
+/* Copyright (c) 2025 MusicNBrain Media Lab. All Rights Reserved.
+   Unauthorized use, copying, or distribution is prohibited.
+   Contact: developer@musicnbrain.org */
+
+@import "tailwindcss";
+
+/* Reset defaults */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
