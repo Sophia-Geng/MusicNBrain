@@ -1,0 +1,19 @@
+2026-02-27 20:55:29,083 - httpx - INFO - HTTP Request: GET https://pypi.org/pypi/fastmcp/json "HTTP/1.1 200 OK"
+2026-02-27 20:55:29,226 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-27 20:55:32,525 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-27 20:55:51,500 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-27 20:55:58,708 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-27 20:56:48,220 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-27 20:56:49,976 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-27 20:56:49,986 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-27 20:56:50,241 - __main__ - INFO - Parsing program text: Here's the program for Saturday's recital:
+
+1. Tommy Chen - Fur Elise (Beethoven), 4 min
+2. Lisa Wan...
+2026-02-27 20:56:58,978 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-02-27 20:57:07,200 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-02-27 20:57:07,218 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-27 20:57:09,056 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-27 20:57:09,057 - __main__ - INFO - Generating program PDF...
+2026-02-27 20:57:14,617 - __main__ - INFO - PDF generated at: static/concert_program.pdf
+2026-02-27 20:57:14,621 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
